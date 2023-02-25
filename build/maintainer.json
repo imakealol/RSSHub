@@ -2382,6 +2382,9 @@
         "oppilate",
         "DIYgod"
     ],
+    "/instagram/2/:category/:key": [
+        "TonyRL"
+    ],
     "/iqiyi/album/:id": [
         "TonyRL"
     ],
@@ -4891,7 +4894,10 @@
     "/xiaohongshu/board/:board_id": [
         "lotosbin"
     ],
-    "/xiaohongshu/user/:user_id/:category": [
+    "/xiaohongshu/user/:user_id/collect": [
+        "lotosbin"
+    ],
+    "/xiaohongshu/user/:user_id/notes": [
         "lotosbin"
     ],
     "/xiaomiyoupin/crowdfunding": [
