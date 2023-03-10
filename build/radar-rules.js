@@ -1085,7 +1085,12 @@
     ".":[ { title:"新发布",
         docs:"https://docs.rsshub.app/shopping.html#arcteryx",
         source:[ "/:country/en/c/:gender/new-arrivals" ],
-        target:"/arcteryx/new-arrivals/:country/:gender" } ] },
+        target:"/arcteryx/new-arrivals/:country/:gender" } ],
+    regear:[ { title:"Regear 新发布",
+        docs:"https://docs.rsshub.app/shopping.html#arcteryx",
+        source:[ "/shop/new-arrivals",
+          "/" ],
+        target:"/arcteryx/regear/new-arrivals" } ] },
   "arknights.jp":{ _name:"明日方舟",
     ak:[ { title:"アークナイツ（日服新闻）",
         docs:"https://docs.rsshub.app/game.html#ming-ri-fang-zhou",
@@ -2489,6 +2494,17 @@
         docs:"https://docs.rsshub.app/traditional-media.html#tian-xia-za-zhi",
         source:[ "/author/:channel" ],
         target:"/cw/author/:channel" } ] },
+  "cztv.com":{ _name:"新蓝网",
+    ".":[ { title:"浙江新闻联播",
+        docs:"https://docs.rsshub.app/traditional-media.html#xin-lan-wang-zhe-jiang-guang-bo-dian-shi-ji-tuan",
+        source:[ "/videos/zjxwlb",
+          "/" ],
+        target:"/cztv/zjxwlb" },
+      { title:"浙江新闻联播-每日合集",
+        docs:"https://docs.rsshub.app/traditional-media.html#xin-lan-wang-zhe-jiang-guang-bo-dian-shi-ji-tuan",
+        source:[ "/videos/zjxwlb",
+          "/" ],
+        target:"/cztv/zjxwlb/daily" } ] },
   "dahecube.com":{ _name:"大河财立方",
     ".":[ { title:"新闻",
         docs:"https://docs.rsshub.app/new-media.html#da-he-cai-li-fang",
@@ -8220,6 +8236,21 @@
         docs:"https://docs.rsshub.app/finance.html#paradigm",
         source:[ "/writing" ],
         target:"/paradigm/writing" } ] },
+  "patagonia.com":{ _name:"Patagonia",
+    ".":[ { title:"New Arrivals",
+        docs:"https://docs.rsshub.app/shopping.html#patagonia",
+        source:[ "/shop/*new-arrivals" ],
+        target:(_, url) => {
+                    const param = new URL(url).pathname.split('/').pop().replace('-new-arrivals', '');
+                    if (param === 'new-arrivals') {
+                        return '';
+                    }
+                    if (param === 'kids-baby') {
+                        return '/patagonia/new-arrivals/kids';
+                    } else {
+                        return `/patagonia/new-arrivals/${param}`;
+                    }
+                } } ] },
   "penguinrandomhouse.com":{ _name:"Penguin Random House",
     ".":[ { title:"Penguin Random House Book Lists",
         docs:"https://docs.rsshub.app/reading.html#penguin-random-house",
@@ -11549,6 +11580,14 @@
         docs:"https://docs.rsshub.app/game.html#you-yan-she",
         source:"/docs",
         target:"/yystv/docs" } ] },
+  "zagg.com":{ _name:"New Arrivals",
+    ".":[ { title:"Zagg - New Arrivals",
+        docs:"https://docs.rsshub.app/shopping.html#zagg",
+        source:[ "/en_us/new-arrivals" ],
+        target:(_, url) => {
+                    const queryString = url.split('?')[1];
+                    return `/zagg/new-arrivals/${queryString}`;
+                } } ] },
   "myzaker.com":{ _name:"ZAKER",
     ".":[ { title:"分类",
         docs:"https://docs.rsshub.app/new-media.html#zaker",
