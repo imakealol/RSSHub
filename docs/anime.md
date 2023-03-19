@@ -626,7 +626,7 @@ Sources
 
 分类
 
-| 全部 | 其他漫畫 | 同人   | 韓漫   | 美漫   | 短篇  | 單本   |
+| 全部 | 其他漫畫 | 同人   | 韓漫   | 美漫   | 短篇  | 单本   |
 | ---- | -------- | ------ | ------ | ------ | ----- | ------ |
 | all  | another  | doujin | hanman | meiman | short | single |
 
@@ -749,6 +749,12 @@ Sources
 更多标签请前往 [搜索种子](https://bangumi.moe/search/index)
 
 </Route>
+
+## 偶像荣耀
+
+### 新闻推送
+
+<Route author="Mingxia1" example="/idolypride/news" path="/idolypride/news" radar="1" rssbud="1"/>
 
 ## 三界异次元
 
