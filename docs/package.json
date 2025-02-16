@@ -28,7 +28,7 @@
     "remark-frontmatter": "3.0.0",
     "remark-gfm": "1.0.0",
     "remark-pangu": "2.2.0",
-    "remark-preset-prettier": "0.5.1",
+    "remark-preset-prettier": "2.0.1",
     "remark-stringify": "9.0.1",
     "string-width": "4.2.3",
     "vuepress": "1.9.9",
